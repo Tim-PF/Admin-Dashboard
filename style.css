@@ -226,6 +226,7 @@ body {
 
 .announcements {
     grid-column: 3 / 4;
+    display:grid;
 }
 .main-trending-title {
     grid-column: 3 / 4;
@@ -253,6 +254,12 @@ body {
     border-style: none;
     border-left-style: solid;
     border-width: 11px;
+    padding: 20px 20px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
     
 }
 
@@ -261,6 +268,7 @@ body {
     margin-right: 40px;
     border-radius: 20px;
     box-shadow: inset 0px -5px 5px rgba(0, 0, 0, 0.2);
+    padding:15px;
    
 }
 
@@ -269,4 +277,75 @@ body {
     margin-right: 40px;
     border-radius: 20px;
     box-shadow: inset 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.article-container > div:first-line {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.article-container button {
+    border:none;
+    background-color: transparent;
+    width: 40px;
+    
+}
+
+.article-container > div:nth-child(2) {
+    display:flex;
+    justify-content: end;
+    gap:15px;
+}
+.announcements > div:nth-child(-n+2) {
+    border-style: none;
+    border-bottom: 1px solid black;
+    
+}
+
+.announcement-container {
+    padding:10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.announcement-container:first-line {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.trending-container {
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    gap: 20px;
+}
+
+.trending-profile {
+    font-family: Arial, Helvetica, sans-serif;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.trending-profile img {
+    width:60px;
+    border-radius: 30px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.trending-profile > p:nth-child(-n+2){
+    font-weight: bold;
+    align-self: end;
+    margin:0px;
+}
+
+.trending-profile p:last-child{
+    font-size: 14px;
+    align-self: top;
+    margin-top: 0px;
 }
